@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class 10 – Student Details</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* --- Reset & Base Styles --- */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f5f7fa;
+      padding: 40px 24px;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    h1 {
+      text-align: center;
+      font-weight: 600;
+      margin-bottom: 32px;
+    }
+
+    /* --- Table Styles --- */
+    .student-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .student-table thead {
+      background: #4f46e5; /* Indigo-600 */
+      color: #ffffff;
+    }
+
+    .student-table th,
+    .student-table td {
+      padding: 16px 20px;
+      text-align: left;
+    }
+
+    .student-table tbody tr:nth-child(even) td {
+      background: #f6f8fc;
+    }
+
+    .student-table tbody tr:hover td {
+      background: #e0e7ff;
+    }
+
+    /* --- Mobile Responsive (Stacked) --- */
+    @media (max-width: 600px) {
+      .student-table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+      }
+      thead {
+        display: none;
+      }
+      tr {
+        margin-bottom: 16px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+        background: #fff;
+      }
+      td {
+        padding: 12px 16px;
+        text-align: right;
+        position: relative;
+      }
+      td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 16px;
+        font-weight: 600;
+        text-transform: capitalize;
+        color: #4f46e5;
+      }
+      /* Alt-row colouring not needed on mobile */
+      .student-table tbody tr:nth-child(even) td {
+        background: inherit;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Class 10 – Student Details</h1>
+
+  <table class="student-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Roll No.</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Age</th>
+        <th>Section</th>
+        <th>Contact</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="#">1</td>
+        <td data-label="Roll No.">101</td>
+        <td data-label="Name">Arun kumar</td>
+        <td data-label="Gender">M</td>
+        <td data-label="Age">15</td>
+        <td data-label="Section">A</td>
+        <td data-label="Contact">+91 98765 43210</td>
+      </tr>
+      <tr>
+        <td data-label="#">2</td>
+        <td data-label="Roll No.">102</td>
+        <td data-label="Name">Ashu Rao</td>
+        <td data-label="Gender">F</td>
+        <td data-label="Age">14</td>
+        <td data-label="Section">A</td>
+        <td data-label="Contact">+91 98765 43211</td>
+      </tr>
+      <tr>
+        <td data-label="#">3</td>
+        <td data-label="Roll No.">103</td>
+        <td data-label="Name">Anji</td>
+        <td data-label="Gender">M</td>
+        <td data-label="Age">15</td>
+        <td data-label="Section">B</td>
+        <td data-label="Contact">+91 98765 43212</td>
+      </tr>
+      <tr>
+        <td data-label="#">4</td>
+        <td data-label="Roll No.">104</td>
+        <td data-label="Name">Akhila</td>
+        <td data-label="Gender">F</td>
+        <td data-label="Age">15</td>
+        <td data-label="Section">B</td>
+        <td data-label="Contact">+91 98765 43213</td>
+      </tr>
+      <tr>
+        <td data-label="#">5</td>
+        <td data-label="Roll No.">105</td>
+        <td data-label="Name">Karthik</td>
+        <td data-label="Gender">M</td>
+        <td data-label="Age">14</td>
+        <td data-label="Section">C</td>
+        <td data-label="Contact">+91 98765 43214</td>
+      </tr>
+      <tr>
+        <td data-label="#">6</td>
+        <td data-label="Roll No.">106</td>
+        <td data-label="Name">Vaishnavi</td>
+        <td data-label="Gender">F</td>
+        <td data-label="Age">15</td>
+        <td data-label="Section">C</td>
+        <td data-label="Contact">+91 98765 43215</td>
+      </tr>
+      <tr>
+        <td data-label="#">7</td>
+        <td data-label="Roll No.">107</td>
+        <td data-label="Name">Vijay</td>
+        <td data-label="Gender">M</td>
+        <td data-label="Age">14</td>
+        <td data-label="Section">D</td>
+        <td data-label="Contact">+91 98765 43216</td>
+      </tr>
+      <tr>
+        <td data-label="#">8</td>
+        <td data-label="Roll No.">108</td>
+        <td data-label="Name">Sukanya</td>
+        <td data-label="Gender">F</td>
+        <td data-label="Age">15</td>
+        <td data-label="Section">D</td>
+        <td data-label="Contact">+91 98765 43217</td>
+      </tr>
+      <tr>
+        <td data-label="#">9</td>
+        <td data-label="Roll No.">109</td>
+        <td data-label="Name">Rohan </td>
+        <td data-label="Gender">M</td>
+        <td data-label="Age">15</td>
+        <td data-label="Section">E</td>
+        <td data-label="Contact">+91 98765 43218</td>
+      </tr>
+      <tr>
+        <td data-label="#">10</td>
+        <td data-label="Roll No.">110</td>
+        <td data-label="Name">Spurthi</td>
+        <td data-label="Gender">F</td>
+        <td data-label="Age">14</td>
+        <td data-label="Section">E</td>
+        <td data-label="Contact">+91 98765 43219</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
